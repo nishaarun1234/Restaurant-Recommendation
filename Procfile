@@ -5,4 +5,4 @@ Created on Sat Jul 16 14:28:27 2022
 @author: arunk
 """
 
-web: gunicorn main:app --preload
+web: gunicorn app:app --preload
