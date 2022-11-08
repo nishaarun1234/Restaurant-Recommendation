@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov  8 10:39:19 2022
+
+@author: arunk
+"""
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendation foods</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/result.css') }}" />
+</head>
+<body>
+<div class=page>
+  <h1>Recommended Foods</h1>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div>
+</body>
+</html>
