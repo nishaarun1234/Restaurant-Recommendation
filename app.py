@@ -125,7 +125,7 @@ get_recommendations("Pongal", topN = 5)
 # IF we recommend the same item it would not be correct, hence the suggestion will be different based on the order items.
 
 
-app = Flask(__name__)
+app=Flask(__name__,template_folder='templates')
 
 @app.route('/')
 def index():
