@@ -14,20 +14,20 @@ import matplotlib.pyplot as plt
 
 
 restraurant = pd.read_excel("C:/Users/arunk/OneDrive/Desktop/Last project/new dataset.xlsx")
-restraurant.shape # shape
-restraurant.columns
+#restraurant.shape
+#restraurant.columns
 
 
 
 ### Identify duplicates records in the data ###
-duplicate = restraurant.duplicated()
-duplicate
-sum(duplicate)  ## no duplicate datas found
+#duplicate = restraurant.duplicated()
+#duplicate
+#sum(duplicate)  ## no duplicate datas found
 
 
 
 # check for null values
-restraurant.isna().sum()
+#restraurant.isna().sum()
 
 from sklearn.impute import SimpleImputer
 
@@ -67,10 +67,10 @@ restraurant.rating = restraurant.rating.astype('int64')
 food = restraurant
 
 # Checking the shape (showing the number of rows & column)
-food.shape 
+#food.shape 
 
 # Checking the column name (showing the column name)
-food.columns
+#food.columns
 
 #term frequencey- inverse document frequncy is a numerical statistic that is intended to reflect how important a word is to document in a collecion or corpus
 from sklearn.feature_extraction.text import TfidfVectorizer 
@@ -131,7 +131,7 @@ def get_recommendations(order1, topN):
     food_similar_show["Score"] = food_scores
     food_similar_show.reset_index(inplace = True)  
     # anime_similar_show.drop(["index"], axis=1, inplace=True)
-    print (food_similar_show)
+    #print (food_similar_show)
     return (food_similar_show)
 
 
@@ -192,7 +192,7 @@ def get_recommendations2(order3, topN):
     food_similar_show2["Score"] = food_scores2
     food_similar_show2.reset_index(inplace = True)  
     # food_similar_show.drop(["index"], axis=1, inplace=True)
-    print (food_similar_show2)
+    #print (food_similar_show2)
     # return (food_similar_show)
 
 
